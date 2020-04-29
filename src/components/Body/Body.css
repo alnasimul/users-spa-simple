@@ -1,0 +1,13 @@
+.Body{
+    display: flex;
+}
+
+.user-info{
+    width: 70%;
+    border-right: 1px solid lightgray;
+    margin: 20px 20px;
+}
+
+.side-bar{
+    margin-left: 20px;
+}

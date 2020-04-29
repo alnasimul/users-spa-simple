@@ -1,9 +1,8 @@
 import React from 'react';
 import './Header.css';
-import users from '../../fakeData';
 
 const Header = () => {
-    console.log(users);
+    //console.log(fakeData);
     return (
         <div class="header-area">
             <h1>Users List Spa</h1>
