@@ -77,7 +77,11 @@ var users = [
     
     {"gender":"female","name":{"title":"Mrs","first":"Lily","last":"Lane"},"location":{"street":{"number":3306,"name":"Victoria Street"},"city":"Manchester","state":"County Fermanagh","country":"United Kingdom","postcode":"J04 8LD","coordinates":{"latitude":"-75.7581","longitude":"101.4776"},"timezone":{"offset":"-11:00","description":"Midway Island, Samoa"}},"email":"lily.lane@example.com","login":{"uuid":"5c4d967d-6e7f-45f5-b263-e6447d62ebc9","username":"bigladybug160","password":"backup","salt":"HurRhtxV","md5":"a19ddf8f5b0f17daf8daee1ff2f62e3e","sha1":"4901cbfbbf4b2884c73802ace196c944646c3acd","sha256":"5c6652f2e8badba55447df2f5e9370b1698ccf06d4402f7cafe2f239b5c29a77"},"dob":{"date":"1990-01-26T23:17:44.784Z","age":30},"registered":{"date":"2018-11-19T17:52:55.446Z","age":2},"phone":"015242 48275","cell":"0764-528-286","id":{"name":"NINO","value":"MN 13 77 26 A"},"picture":{"large":"https://randomuser.me/api/portraits/women/94.jpg","medium":"https://randomuser.me/api/portraits/med/women/94.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/94.jpg"},"nat":"GB"}]
 
-    let newUsers = JSON.parse(users);
-    export default newUsers;
+    let newUsers = JSON.stringify(users);
+    let newUsersParse = JSON.parse(newUsers)
+
+
+export default newUsersParse;
+  
 
 
