@@ -1,6 +1,9 @@
 .header-area{
     background-color: lightgray;
-    line-height: 100px;
+    line-height: 150px;
     text-align: center;
+    box-shadow: 10px 5px 30px gray;
+    margin: 20px 20px;
+    border-radius: 5px;
 }
 

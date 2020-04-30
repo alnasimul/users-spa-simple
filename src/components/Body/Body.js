@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Body.css'
 import User from '../Users/User';
 import newUsersParse from '../../fakeData';
+import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
+import Summary from '../Summary/Summary';
 
 
 
@@ -55,16 +57,25 @@ const Body = () => {
 
 //    users[i].image = image;
 // }
+const [status,setStatus] = useState([]);
+function handelAddFriend(friendAdded){
+  console.log(friendAdded);
+  console.log('friend added');
 
-  console.log(users);
+  const newStatus = [...status,friendAdded];
+  
+  setStatus(newStatus);
+}
+
+  //console.log(users);
   return (
     <div className="Body">
       <div className="user-info">
-        {users.map(user => <User user={user}></User>)}
+        {users.map(user => <User user={user} handelAddFriend={handelAddFriend}></User>)}
       </div>
-      <div className="side-bar">
-        <h1>This is sidebar</h1>
-      </div>
+    <div className="side-bar">
+       <Summary status={status}></Summary>
+    </div>
     </div>
   );
 };

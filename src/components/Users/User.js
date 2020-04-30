@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 import './User.css'
 
 const User = (props) => {
@@ -13,13 +16,13 @@ const User = (props) => {
             </div>
             <div className="singel-user-info">
                 <h3>{props.user.name.first} {props.user.name.last}</h3>
-                <p>Username: <small>{props.user.login.username}</small></p>
+                <p> <strong>Username:</strong> <small>{props.user.login.username}</small></p>
                 <br />
-                <p>Email: {props.user.email}</p>
+                <p><strong>Email:</strong> {props.user.email}</p>
                 <br />
-                <p>Salary: <small>${props.user.salary}</small></p>
-                <p>Phone: <small>{props.user.phone}</small></p>
-                <button>Add Me</button>
+                <p><strong>Yearly Salary:</strong> <small>${props.user.salary}</small></p>
+                <p><strong>Phone:</strong> <small>{props.user.phone}</small></p>
+                <button onClick={() => props.handelAddFriend(props.user)}><FontAwesomeIcon icon={faPlus} /> Add Me</button>
             </div>
         </div>
     );
